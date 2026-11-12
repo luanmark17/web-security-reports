@@ -74,15 +74,15 @@ A execução de `alert(1)` comprova a possibilidade de execução de JavaScript,
 
 ### 1. Reflexão no HTML
 
-![Reflexão da entrada no HTML](evidence/01-html-reflection.png)
+![Reflexão da entrada no HTML](01-html-reflection.png)
 
 ### 2. Execução do JavaScript
 
-![Execução do alert](evidence/02-xss-poc.png)
+![Execução do alert](02-xss-poc.png)
 
 ### 3. Laboratório concluído
 
-![Confirmação de conclusão](evidence/03-lab-solved.png)
+![Confirmação de conclusão](03-lab-solved.png)
 
 ##  Referências
 
