@@ -4,15 +4,15 @@ Esta seção reúne estudos práticos, análises técnicas e relatórios de vuln
 
 # Tipos de XSS nesta seção
 
-- Reflected XSS
-- Stored XSS
-- DOM-based XSS
+- `Reflected XSS`
+- `Stored XSS`
+- `DOM-based XSS`
 
 # Ferramentas utilizadas nesta seção
 
-- Burp Suite
-- Google Chrome
-- PortSwigger Web Security Academy
+- `Burp Suite`
+- `Google Chrome`
+- `PortSwigger Web Security Academy`
 
 # Objetivo desta seção
 
