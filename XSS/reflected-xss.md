@@ -84,7 +84,7 @@ A execução de `alert(1)` comprova a possibilidade de execução de JavaScript,
 
 ![Confirmação de conclusão](03-lab-solved.png)
 
-##  Referências
+##  Referencias
 
 - [PortSwigger - Cross-Site Scripting](https://portswigger.net/web-security/cross-site-scripting)
 - [OWASP - Cross Site Scripting](https://owasp.org/www-community/attacks/xss/)
