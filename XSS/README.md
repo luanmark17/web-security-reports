@@ -1,19 +1,19 @@
 # Cross-Site Scripting (XSS)
 
-Esta seção reúne estudos práticos, análises técnicas e relatórios de vulnerabilidades Cross-Site Scripting (XSS).
+This section brings together practical studies, technical analyses, and Cross-Site Scripting (XSS) vulnerability reports.
 
-# Tipos de XSS nesta seção
+# Types of XSS Covered
 
 - `Reflected XSS`
 - `Stored XSS`
 - `DOM-based XSS`
 
-# Ferramentas utilizadas nesta seção
+# Tools Used in This Section
 
 - `Burp Suite`
 - `Google Chrome`
 - `PortSwigger Web Security Academy`
 
-# Objetivo desta seção
+# Objective of This Section
 
-Documentar vulnerabilidades, técnicas de identificação, provas de conceito (PoC), impactos e recomendações de correção.
+To document vulnerabilities, identification techniques, Proofs of Concept (PoCs), potential impacts, and remediation recommendations.
