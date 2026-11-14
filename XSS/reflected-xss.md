@@ -74,15 +74,15 @@ The execution of `alert(1)` confirms JavaScript execution but does not independe
 
 ### 1. HTML Reflection
 
-[View HTML reflection](https://github.com/luanmark17/web-security-reports/blob/main/XSS/01-html-reflection.png) ([Image](https://github.com/luanmark17/web-security-reports/raw/main/XSS/01-html-reflection.png))
+![HTML Reflection](01-html-reflection.png)
 
 ### 2. JavaScript Execution
 
-[View alert execution](https://github.com/luanmark17/web-security-reports/blob/main/XSS/02-xss-poc.png) ([Image](https://github.com/luanmark17/web-security-reports/raw/main/XSS/02-xss-poc.png))
+![JavaScript Execution](02-xss-poc.png)
 
 ### 3. Lab Completion
 
-[View lab completion evidence](https://github.com/luanmark17/web-security-reports/blob/main/XSS/03-lab-solved.png) ([Image](https://github.com/luanmark17/web-security-reports/raw/main/XSS/03-lab-solved.png))
+![Lab Completion](03-lab-solved.png)
 
 ## References
 
