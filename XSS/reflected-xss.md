@@ -1,94 +1,94 @@
 # Reflected Cross-Site Scripting (XSS)
 
-##  Informações gerais
+## General Information
 
-| Campo | Informacao |
+| **Field** | **Information** |
 |---|---|
-| Vulnerabilidade | Reflected Cross-Site Scripting (XSS) |
-| Categoria | Injection |
-| Plataforma | PortSwigger Web Security Academy |
-| Laboratório | Reflected XSS into HTML context with nothing encoded |
-| Ferramentas | Google Chrome e DevTools |
-| Linguagens | HTML e JavaScript |
-| Status | Resolvido |
-| Nível | Apprentice |
+| Vulnerability | Reflected Cross-Site Scripting (XSS) |
+| Category | Injection |
+| Platform | PortSwigger Web Security Academy |
+| Lab | Reflected XSS into HTML context with nothing encoded |
+| Tools | Google Chrome and Chrome DevTools |
+| Languages | HTML and JavaScript |
+| Status | Solved |
+| Difficulty | Apprentice |
 
-##  Descrição
+## Description
 
-Foi identificada uma vulnerabilidade de Reflected Cross-Site Scripting (XSS) em uma funcionalidade de pesquisa.
+A Reflected Cross-Site Scripting (XSS) vulnerability was identified in a search functionality.
 
-A aplicação refletia diretamente o conteúdo fornecido pelo usuário na resposta HTML, sem realizar a codificação adequada para o contexto.
+The application directly reflected user-supplied input in the HTML response without proper output encoding.
 
-A entrada era inserida dentro de um elemento HTML `<h1>`, permitindo a interpretação de código HTML e JavaScript fornecido pelo usuário.
+The input was inserted inside an HTML `<h1>` element, allowing user-supplied HTML and JavaScript code to be interpreted by the browser.
 
-##  Ambiente de testes
+## Testing Environment
 
-- Plataforma: PortSwigger Web Security Academy.
-- Navegador: Google Chrome.
-- Ferramenta de análise: Chrome DevTools.
-- Funcionalidade testada: pesquisa do site.
+- Platform: PortSwigger Web Security Academy.
+- Browser: Google Chrome.
+- Analysis tool: Chrome DevTools.
+- Tested functionality: Website search feature.
 
-##  Procedimento de identificação
+## Identification Procedure
 
-1. Acessar o laboratório disponibilizado pela PortSwigger.
-2. Localizar a funcionalidade de pesquisa.
-3. Inserir uma palavra de teste no campo de pesquisa.
-4. Inspecionar o HTML utilizando a aba Elements do DevTools.
-5. Localizar a entrada refletida na estrutura HTML.
-6. Identificar que a entrada estava inserida no contexto HTML, dentro de um elemento `<h1>`.
+1. Access the lab provided by PortSwigger.
+2. Locate the search functionality.
+3. Enter a test string into the search field.
+4. Inspect the HTML using the DevTools Elements tab.
+5. Locate the reflected input in the HTML structure.
+6. Identify that the input was inserted into an HTML context inside an `<h1>` element.
 
-##  Proof of Concept (PoC)
+## Proof of Concept (PoC)
 
-Payload utilizado:
+Payload used:
 
 ```html
 <script>alert(1)</script>
 ```
 
-Após inserir o payload no campo de pesquisa, a aplicação refletiu o conteúdo na resposta HTML.
+After submitting the payload through the search field, the application reflected the content in the HTML response.
 
-O navegador interpretou a tag `<script>` e executou o JavaScript, exibindo uma janela de alerta com o valor `1`.
+The browser interpreted the `<script>` tag and executed the JavaScript, displaying an alert dialog containing the value `1`.
 
-**Resultado:** execução de JavaScript confirmada.
+**Result:** JavaScript execution successfully confirmed.
 
-##  Impacto potencial
+## Potential Impact
 
-Dependendo do contexto da aplicação, uma vulnerabilidade XSS pode permitir:
+Depending on the application's context, an XSS vulnerability may allow:
 
-- Execução de JavaScript no navegador de outros usuários.
-- Manipulação do conteúdo apresentado na página.
-- Realização de ações em nome de usuários autenticados, conforme as permissões e proteções existentes.
-- Acesso a informações disponíveis ao contexto da aplicação, quando não protegidas por mecanismos de segurança.
+- JavaScript execution in other users' browsers.
+- Manipulation of page content.
+- Actions performed on behalf of authenticated users, depending on their permissions and existing security protections.
+- Access to information available within the application's context, when not protected by security mechanisms.
 
-A execução de `alert(1)` comprova a possibilidade de execução de JavaScript, mas não demonstra, isoladamente, o comprometimento de contas ou o acesso a informações sensíveis.
+The execution of `alert(1)` confirms JavaScript execution but does not independently demonstrate account compromise or access to sensitive information.
 
-##  Recomendações de correção
+## Remediation Recommendations
 
-- Implementar codificação de saída adequada ao contexto HTML.
-- Evitar inserir dados não confiáveis diretamente no HTML.
-- Utilizar APIs seguras para manipulação do DOM.
-- Implementar uma Content Security Policy (CSP) como camada adicional de proteção.
-- Validar e tratar adequadamente entradas fornecidas pelos usuários.
+- Implement context-appropriate output encoding for HTML.
+- Avoid inserting untrusted data directly into HTML.
+- Use safe APIs for DOM manipulation.
+- Implement a Content Security Policy (CSP) as an additional layer of protection.
+- Properly validate and handle user-supplied input.
 
-##  Evidências
+## Evidence
 
-### 1. Reflexão no HTML
+### 1. HTML Reflection
 
-![Reflexão da entrada no HTML](01-html-reflection.png)
+[View HTML reflection](01-html-reflection.png)
 
-### 2. Execução do JavaScript
+### 2. JavaScript Execution
 
-![Execução do alert](02-xss-poc.png)
+[View alert execution](02-xss-poc.png)
 
-### 3. Laboratório concluído
+### 3. Lab Completion
 
-![Confirmação de conclusão](03-lab-solved.png)
+[View lab completion evidence](03-lab-solved.png)
 
-##  Referencias
+## References
 
 - [PortSwigger - Cross-Site Scripting](https://portswigger.net/web-security/cross-site-scripting)
-- [OWASP - Cross Site Scripting](https://owasp.org/www-community/attacks/xss/)
+- [OWASP - Cross-Site Scripting](https://owasp.org/www-community/attacks/xss/)
 
 ---
 
-**Aviso:** Este relatório documenta uma prática educacional realizada em ambiente controlado da PortSwigger Web Security Academy. Não representa uma vulnerabilidade encontrada em um sistema de produção.
+**Disclaimer:** This report documents an educational exercise performed in the controlled PortSwigger Web Security Academy environment. It does not represent a vulnerability discovered in a production system.
