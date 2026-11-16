@@ -74,15 +74,15 @@ The execution of `alert(1)` confirms JavaScript execution but does not independe
 
 ### 1. HTML Reflection
 
-![HTML Reflection](01-html-reflection.png)
+![HTML Reflection](evidence/01-html-reflection.png)
 
 ### 2. JavaScript Execution
 
-![JavaScript Execution](02-xss-poc.png)
+![JavaScript Execution](evidence/02-xss-poc.png)
 
 ### 3. Lab Completion
 
-![Lab Completion](03-lab-solved.png)
+![Lab Completion](evidence/03-lab-solved.png)
 
 ## References
 
