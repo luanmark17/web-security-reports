@@ -59,19 +59,19 @@ The alert demonstration confirms JavaScript execution, but does not independentl
 ## 8. Evidence
 
 ### Comment Form
-![Comment form](01-comment-form.png)
+![Comment form](evidence/01-comment-form.png)
 
 ### Stored Comment
-![Stored comment](02-comment-stored.png)
+![Stored comment](evidence/02-comment-stored.png)
 
 ### Persistence After Refresh
-![Comment persistence](03-comment-persistence.png)
+![Comment persistence](evidence/03-comment-persistence.png)
 
 ### JavaScript Execution
-![Stored XSS PoC](04-stored-xss-poc.png)
+![Stored XSS PoC](evidence/04-stored-xss-poc.png)
 
 ### Lab Solved
-![Lab solved](05-lab-solved.png)
+![Lab solved](evidence/05-lab-solved.png)
 
 ## 9. References
 
