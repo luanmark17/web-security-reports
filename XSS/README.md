@@ -1,19 +1,41 @@
 # Cross-Site Scripting (XSS)
 
-This section brings together practical studies, technical analyses, and Cross-Site Scripting (XSS) vulnerability reports.
+This section contains practical security research, vulnerability analysis, and technical reports related to Cross-Site Scripting (XSS).
 
-# Types of XSS Covered
+## Completed Labs
 
-- `Reflected XSS`
-- `Stored XSS`
-- `DOM-based XSS`
+| Vulnerability | Lab | Difficulty | Status |
+|---|---|---|---|
+| Reflected XSS | Reflected XSS into HTML context with nothing encoded | Apprentice | Solved |
+| Stored XSS | Stored XSS into HTML context with nothing encoded | Apprentice | Solved |
+| DOM-based XSS | DOM XSS in document.write sink using source location.search | Apprentice | Solved |
 
-# Tools Used in This Section
+## Reports
 
-- `Burp Suite`
-- `Google Chrome`
-- `PortSwigger Web Security Academy`
+- [Reflected XSS Report](Reflected-XSS/reflected-xss.md)
+- [Stored XSS Report](Stored-XSS/stored-xss.md)
+- [DOM-based XSS Report](DOM-XSS/dom-xss.md)
 
-# Objective of This Section
+## Tools Used
 
-To document vulnerabilities, identification techniques, Proofs of Concept (PoCs), potential impacts, and remediation recommendations.
+- Google Chrome
+- Chrome DevTools
+- PortSwigger Web Security Academy
+
+## Topics Studied
+
+- Reflected Cross-Site Scripting
+- Stored Cross-Site Scripting
+- DOM-Based Cross-Site Scripting
+- HTML injection contexts
+- JavaScript execution
+- DOM manipulation
+- Sources and sinks
+
+## Objective 
+
+To develop practical web application security skills through authorized security labs, documenting vulnerability discovery, exploitation techniques, proof of concepts, potential impact, and remediation recommendations.
+
+---
+
+**Disclaimer:** All exercises documented in this section were performed in authorized educational environments.
