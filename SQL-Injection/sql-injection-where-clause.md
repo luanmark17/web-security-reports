@@ -1,12 +1,12 @@
 # SQL Injection in WHERE Clause - Retrieving Hidden Data
 
-## 1. Overview
+##  Overview
 
 This report documents an SQL Injection vulnerability identified and exploited in an authorized PortSwigger Web Security Academy lab.
 
 The vulnerability allowed the retrieval of products that were hidden by the application's category filter.
 
-## 2. Lab Information
+##  Lab Information
 
 - **Platform:** PortSwigger Web Security Academy
 - **Lab:** SQL injection vulnerability in WHERE clause allowing retrieval of hidden data
@@ -15,13 +15,13 @@ The vulnerability allowed the retrieval of products that were hidden by the appl
 - **Affected Parameter:** `category`
 - **Status:** Successfully solved
 
-## 3. Vulnerability Details
+##  Vulnerability Details
 
 The application used the `category` URL parameter to filter products.
 
 The parameter was vulnerable to SQL Injection because user-controlled input was interpreted as part of the SQL query without proper handling.
 
-## 4. Steps to Reproduce
+##  Steps to Reproduce
 
 1. Open the authorized PortSwigger lab.
 2. Select a product category.
@@ -30,7 +30,7 @@ The parameter was vulnerable to SQL Injection because user-controlled input was 
 5. Use a SQL condition that evaluates to true to retrieve products from other categories.
 6. Observe the hidden products in the response.
 
-## 5. Proof of Concept (PoC)
+##  Proof of Concept (PoC)
 
 **Vulnerable parameter:**
 `category`
@@ -43,13 +43,13 @@ The parameter was vulnerable to SQL Injection because user-controlled input was 
 
 The injected condition caused the query to return products beyond the originally selected category.
 
-## 6. Impact
+##  Impact
 
 An attacker exploiting this vulnerability could bypass the application's category filtering and retrieve products that were intended to remain hidden.
 
 Depending on the database query and application context, similar vulnerabilities may expose other unauthorized information.
 
-## 7. Remediation
+##  Remediation
 
 - Use parameterized queries (prepared statements).
 - Avoid concatenating user input directly into SQL queries.
@@ -57,25 +57,25 @@ Depending on the database query and application context, similar vulnerabilities
 - Apply the principle of least privilege to database accounts.
 - Avoid exposing detailed database errors to users.
 
-## 8. Evidence
+##  Evidence
 
-### 8.1 Lab Homepage
+### 1. Lab Homepage
 
 ![Lab Homepage](evidence/01-lab-homepage.png)
 
-### 8.2 Category Parameter
+### 2. Category Parameter
 
 ![Category Parameter](evidence/02-category-parameter.png)
 
-### 8.3 SQL Injection Test
+### 3. SQL Injection Test
 
 ![SQL Injection Test](evidence/03-sql-error-test.png)
 
-### 8.4 Hidden Data Retrieved
+### 4. Hidden Data Retrieved
 
 ![Hidden Data Retrieved](evidence/04-hidden-data-retrieved.png)
 
-## 9. References
+##  References
 
 - [PortSwigger - SQL Injection](https://portswigger.net/web-security/sql-injection)
 - [PortSwigger - SQL Injection Labs](https://portswigger.net/web-security/all-labs#sql-injection)
