@@ -59,7 +59,21 @@ Depending on the database query and application context, similar vulnerabilities
 
 ## 8. Evidence
 
-Screenshots documenting the testing process and successful exploitation are available below.
+### 8.1 Lab Homepage
+
+![Lab Homepage](evidence/01-lab-homepage.png)
+
+### 8.2 Category Parameter
+
+![Category Parameter](evidence/02-category-parameter.png)
+
+### 8.3 SQL Injection Test
+
+![SQL Injection Test](evidence/03-sql-error-test.png)
+
+### 8.4 Hidden Data Retrieved
+
+![Hidden Data Retrieved](evidence/04-hidden-data-retrieved.png)
 
 ## 9. References
 
